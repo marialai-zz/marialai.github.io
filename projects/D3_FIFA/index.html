@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Maria Lai D3 Advanced Line Chart</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div class="container">
+
+        <h3>Maria Lai</h3>
+        <h3>D3.js Project: Advanced Line Chart</h3>
+        <p>My work is in <em><a href="js/main.js">main.js</a></em>.</p>
+        <ul>
+            <li>Manipulate csv data (filter, sort, data formats)</li>
+            <li><strong>Filter</strong> data based on <strong>selection box</strong> and <strong>time frame</strong></li>
+            <li><strong>On data point hover:</strong> update DOM dynamically with more info</li>
+            <li><strong>Dynamic line chart:</strong> Dynamic axes, transitions between updates</li>
+        </ul>
+
+        <h1>FIFA World Cup<sup>TM</sup></h1>
+        <h2>All Time Statistics</h2>
+
+        <!-- Select box to choose Y-AXIS-->
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="y-selection">Chart Data</label>
+                <select class="form-control" id="y-selection" onchange="updateVisualization(data)">
+                    <option value="GOALS">Goals</option>
+                    <option value="AVERAGE_GOALS">Average Goals</option>
+                    <option value="MATCHES">Matches</option>
+                    <option value="TEAMS">Teams</option>
+                    <option value="AVERAGE_ATTENDANCE">Average Attendance</option>
+                </select>
+            </div>
+        </form>
+
+        <!-- Time range selection -->
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="fromDate">Time Period</label>
+                <input type="text" id="fromDate" value="1930">
+                <label for="toDate">-</label>
+                <input type="text" id="toDate" value="2014">
+                <button type="button" class="btn btn-primary" id="filter">Filter</button>
+            </div>
+        </form>
+
+        <!-- Parent container for the visualization -->
+        <div id="chart-area" class="col-md-8"></div>
+
+        <div id="info" class="col-md-4"></div>
+	</div>
+
+
+
+	<!-- Load JS libraries: jQuery, bootstrap, D3, D3 tooltip -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/d3.tip.js"></script>
+
+	<!-- Your implementation -->
+	<script src="js/main.js"></script>
+</body>
+</html>

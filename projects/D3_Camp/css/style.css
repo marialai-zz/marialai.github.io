@@ -1,0 +1,80 @@
+h1,h3 {
+  text-align: center;
+  font-family: Papyrus, fantasy;
+  font-weight: bold;
+}
+
+h1 {
+  color: crimson;
+}
+
+h3 {
+  color: #3C948B;
+}
+
+text.bartext, text.datetext {
+  fill: #3C948B;
+  font-weight: bold;
+}
+
+text.poptext {
+  fill: pink;
+  font-weight: bold;
+}
+
+/**** area chart ****/
+
+.axis {
+  font: 9px sans-serif;
+}
+
+.axis path,
+.axis line,
+.domain {
+  fill: none;
+  stroke: #888;
+  shape-rendering: crispEdges;
+}
+
+#area-chart text {
+  font-size: 9px;
+}
+
+.axis-label {
+  fill: #888;
+  font-size: 9x;
+}
+
+path.area {
+  fill: pink;
+}
+
+text#area-title {
+  font-size: 14px;
+}
+
+path.line {
+  stroke: red;
+  stroke-width: 3;
+  fill: none;
+}
+
+/****************/
+/*   BAR-CHART  */
+/****************/
+
+.bar {
+  fill: #C3FDB8;
+}
+
+.bar:hover {
+  fill: #3C948B;
+}
+
+#type-shelter {
+  font-size: 9px;
+}
+
+text {
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
