@@ -31,19 +31,24 @@ section.module.parallax {
   background-size: cover;
 }
 section.module.parallax h1 {
-  color: rgba(255, 255, 255, 0.8);
   font-size: 48px;
-  /*line-height: 600px;*/
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+section.module.parallax-2 h1 {
+  line-height: 600px;
+}
+
 section.module.parallax-1 {
   background-image: url("../img/website.png");
+  color: rgba(255, 255, 255, 0.8);
 }
 section.module.parallax-2 {
-  background-image: url("../img/demo/_small/2.jpg");
+  background-image: url("../img/firefox.png");
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 section.module.parallax-3 {
   background-image: url("../img/demo/_small/3.jpg");

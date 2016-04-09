@@ -5,17 +5,21 @@
   <!-- title and meta -->
   <meta charset="utf-8">
   <meta content="width=device-width,initial-scale=1.0" name="viewport">
-  <meta content="description" name="In this tutorial, we take a look at a beautiful parallax scrolling effect in the simplest of ways, with stationary backgrounds and scrolling content.">
+  <meta content="description" name="Hello GSoC">
 
-  <title>Hello GsOC</title>
+  <title>Hello GSoC</title>
 
   <!-- css -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab">
   <link rel="stylesheet" href="outreachy/css/base.css">
   <link rel="stylesheet" href="outreachy/css/style.css">
+  <link rel="stylesheet" href="timeline/css/reset.css">
+  <link rel="stylesheet" href="timeline/css/style.css">
 
   <!-- js -->
   <script src="outreachy/js/modernizr.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="timeline/js/main.js"></script> <!-- Resource jQuery -->
 </head>
 
 <body>
@@ -41,26 +45,93 @@
           <h2>I'm Maria.</h2>
           <!--<p>My <a href="https://bugzilla.mozilla.org/user_profile?login=mttlai11%40gmail.com">Bugzilla</a> Profile</p>-->
           <p>My first contribution: I fixed <a href="https://github.com/mozilla/fxa-content-server/issues/3639">this</a> bug.</p>
+          <p>Scroll down to read more!</p>
           </div>
       </section>
-<!--
+
       <section class="module parallax parallax-2">
         <div class="container">
-          <h1>Rise</h1>
+          <h1>Firefox</h1>
         </div>
       </section>
 
-      <section class="module content">
-        <div class="container">
-          <h2>Lorem Ipsum Dolor</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consequuntur, nesciunt dicta, esse rem ducimus itaque quis. Adipisci ullam nam qui illum debitis sit ad in delectus, repudiandae non dolorum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit veritatis, facere aliquid itaque tempore consequatur nihil sint enim aliquam id saepe magnam totam repellat placeat a fugit nulla molestias voluptas.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta cum distinctio eum asperiores rem enim fugit eaque voluptas est laboriosam in repudiandae architecto placeat, illum atque quasi explicabo, culpa, molestias!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit voluptas, aperiam quae provident, recusandae rem quis. Ut quaerat, quasi iste voluptate et dolorem atque sed neque voluptates, molestias dolor enim!</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odit tempore, quibusdam impedit deserunt. Natus quisquam, facilis numquam, molestias nesciunt modi, at debitis maxime sunt et quo quas labore perferendis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde delectus laborum doloremque recusandae, debitis maxime a! Nihil distinctio ex, cumque tempore ea voluptas omnis odit, quaerat natus nam excepturi corporis!</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque eius harum atque unde nihil aut quam provident sunt, iste error vitae suscipit dolores cupiditate totam, eum quae alias! Dicta, nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate beatae impedit officia quis odit rerum sequi, explicabo commodi illum suscipit, tempore eum doloremque quae obcaecati tempora quidem neque sapiente modi?</p>
-        </div>
-      </section>
+      <!--<section class="module content">
+        <div class="container">-->
+          <section id="cd-timeline" class="cd-container">
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture"></div> <!-- cd-timeline-img -->
 
-      <section class="module parallax parallax-3">
+			<div class="cd-timeline-content">
+				<h2>Found information about GSoC</h2>
+				<p>After hearing about the program, I read more information about it and did research on organizations and projects.</p>
+				<span class="cd-date">Early March</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie"></div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Reached out to my mentor</h2>
+				<p>I contacted my mentor, Vlad, and expressed my interest in working on the Firefox Accounts project. Vlad gave me tips on getting started.</p>
+				<span class="cd-date">Mar 16</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture"></div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Environment Installation</h2>
+				<p>The installation took me awhile.</p>
+                   <ul>
+                       <li>I use Windows so I needed to install an Ubuntu VM.</li>
+                       <li>I needed to install the local developer environment on my Ubuntu VM.</li>
+                   </ul>
+                <p>I learned to solve problems with my VM and use Linux/Ubuntu commands.</p>
+				<span class="cd-date">Mar 21 - Apr 4</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-location"></div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content" id="solution">
+				<h2>Wrote bug fix and test</h2>
+				<p>Understanding the code, writing a fix for a bug, testing the code, and writing test for my fix took me a few hours.</p>
+                <p><a href="https://github.com/mozilla/fxa-content-server/issues/3639">The bug</a>: it is possible to sign up for an account with a non-interger age.</a>
+                <p>What I needed to do: force integer input for the age field on sign-up page.</p>
+                <p>My solution: I wrote a keydown event handler, which calls preventDefault() if the keypress is not numeric.</p>
+				<span class="cd-date">Apr 5 - Apr 6</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-location">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Submitted pull request and re-write code based on feedback</h2>
+				<p>I learned how pull requests on GitHub worked and submitted a <a href="https://github.com/mozilla/fxa-content-server/pull/3642">pull request</a> for my bug fix.</p>
+				<span class="cd-date">Apr 6 - </span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Continuing to contribute</h2>
+				<p>I plan to contribute and learn more with Firefox Accounts!</p>
+				<span class="cd-date">Now</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+	</section> <!-- cd-timeline -->
+        <!--</div>
+      </section>-->
+
+      <!--<section class="module parallax parallax-3">
         <div class="container">
           <h1>Calm</h1>
         </div>
