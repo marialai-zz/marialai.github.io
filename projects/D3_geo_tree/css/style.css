@@ -1,0 +1,164 @@
+/*Page CSS*/
+.header-bg {
+    background: url("../img/malaria.jpg");
+    width:100%;
+    height:375px;
+    background-size:cover;
+}
+
+.jumbotron {
+    color: crimson;
+    background: transparent;
+    text-shadow: white 0.3em 0.3em 0.3em;
+}
+
+h1 {
+    font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    margin-top: 165px;
+    margin-bottom: 0px;
+}
+
+h3 {
+    font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    color: crimson;
+}
+
+.jumbotron p {
+    color: white;
+    text-shadow: black 0 0 3px;
+    font-weight: bold;
+}
+
+.key-facts {
+    display: inline-block;
+    width: 55%;
+    padding: 30px;
+    background-color: #f3f3f3;
+    border-radius: 3px;
+    border-style: dashed;
+    border-color: crimson;
+    margin-left: 25%;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+.center-block {
+    text-align: center;
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+.number {
+    font-size: 50px;
+    color: #1b6d85;
+}
+
+path.subunit-boundary {
+    fill: none;
+    stroke: white;
+}
+
+.number {
+
+}
+
+.gray { fill: #ccc;}
+
+.q0-7 { fill:#fef0d9; }
+.q1-7 { fill:#fdd49e; }
+.q2-7 { fill:#fdbb84; }
+.q3-7 { fill:#fc8d59; }
+.q4-7 { fill:#ef6548; }
+.q5-7 { fill:#d7301f; }
+.q6-7 { fill:#990000; }
+
+.p0-7 { fill:#eff3ff; }
+.p1-7 { fill:#c6dbef; }
+.p2-7 { fill:#9ecae1; }
+.p3-7 { fill:#6baed6; }
+.p4-7 { fill:#4292c6; }
+.p5-7 { fill:#2171b5; }
+.p6-7 { fill:#084594; }
+
+/* Legend Box */
+
+.key path {
+    display: none;
+}
+
+.key line {
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.legend-title {
+    font-weight: bold;
+}
+
+.legend-box {
+    fill: none;
+    stroke: #888;
+    font-size: 10px;
+}
+ g.legend-items > text {
+     font: 10px sans-serif;
+ }
+
+/*********************/
+/*  TOOLTIP OVERLAY  */
+/*********************/
+
+.tooltip-title {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.d3-tip {
+    line-height: 1;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
+/*TREE LAYOUT*/
+.node circle {
+    fill: #addd8e;
+    stroke: #31a354;
+    stroke-width: 3px;
+}
+
+.node text { font: 12px sans-serif; }
+
+.link {
+    fill: none;
+    stroke: #addd8e;
+    stroke-width: 2px;
+}

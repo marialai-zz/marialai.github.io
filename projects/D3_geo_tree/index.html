@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Maria Lai: Malaria</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class = "container">
+		<h3>Maria Lai</h3>
+		<h3>D3.js Project: Interactive Choropleth & Tree Diagram</h3>
+		<p>In <em><a href="js/vis-choropleth.js">vis-choropleth.js</a></em>:</p>
+		<ul>
+			<li>Interactive Choropleth: data manipulations (filtering, handle NaN's), data mapping, on hover tooltip, color legend.</li>
+		</ul>
+		<p>In <em><a href="js/vis-second.js">vis-second.js</a></em>:</p>
+		<ul>
+			<li>Interactive Tree Diagram: click on nodes to collapse and expand relationships.</li>
+		</ul>
+		<div class = "header-bg">
+			<div class="jumbotron">
+				<div class="container">
+					<h1>Malaria</h1>
+					<p>A life-threatening disease caused by parasites that are transmitted to people through the bites of infected female mosquitoes.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class = "info">
+				<h3>What is Malaria?</h3>
+				<p>Malaria is caused by the Plasmodium parasite and is transmitted by female Anopheles mosquitoes which bite between dusk and dawn. People infected with malaria often experience fever, chills and flu-like illness at first. Left untreated, the disease can lead to severe complications and, in some cases, death.</p>
+		</div>
+
+		<div class = "key-facts">
+			<div class="row">
+				<div class="center-block">
+					<h3>Key Fact By a Number</h3>
+					<span class="number">3.2 billion</span> <p>people – almost half of the world’s population – are at risk of malaria.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class = "info">
+			<br>
+			<img src="img/malaria2.jpg">
+			<h3>Malaria Parasites</h3>
+			<p>Malaria in humans is caused by five species of parasites belonging to the genus Plasmodium.</p>
+		</div>
+
+		<!-- Tree layout area -->
+		<div id="tree-layout"></div>
+
+		<div class="info">
+			<p>Four of these – P. falciparum, P. vivax, P. malariae and P. ovale – are human malaria species that are spread from one person to another via the bite of female mosquitoes of the genus Anopheles. There are about 400 different species of Anopheles mosquitoes, but only 30 of these are vectors of major importance. In recent years, human cases of malaria due to P. knowlesi have been recorded – this species causes malaria among monkeys in certain forested areas of South-East Asia. Current information suggests that P. knowlesi malaria is not spread from person to person, but rather occurs in people when an Anopheles mosquito infected by a monkey then bites and infects humans (zoonotic transmission). P. falciparum and P. vivax are the most prevalent, and P. falciparum is the most dangerous, with the highest rates of complications and mortality. This deadly form of malaria is a serious public health concern in most countries in sub-Saharan Africa.</p>
+		</div>
+
+		<div class = "key-facts">
+			<div class="row">
+				<div class="center-block">
+					<h3>Key Fact By a Number</h3>
+					<span class="number">214 million</span> <p>malaria cases reported worldwide in 2015.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class = "info">
+		<h3>Malaria Cases</h3>
+		<p>The number of malaria cases globally fell from an estimated 262 million in 2000 (range: 205–316 million), to 214 million in 2015 (range: 149–303 million), a decline of 18%. Most cases in 2015 are estimated to have occurred in the WHO African Region (88%), followed by the WHO South-East Asia Region (10%) and the WHO Eastern Mediterranean Region (2%).</p>
+	</div>
+
+		<div class = "key-facts">
+			<div class="row">
+				<div class="center-block">
+					<h3>Key Fact By a Number</h3>
+					<span class="number">37%</span> <p>global decrease in malaria incidence between 2000 and 2015.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class = "info">
+			<h3>Malaria Deaths</h3>
+			<p>The number of malaria deaths globally fell from an estimated 839 000 in 2000 (range: 653 000–1.1 million), to 438 000 in 2015 (range: 236 000–635 000), a decline of 48%. Most deaths in 2015 were in the WHO African Region (90%), followed by the WHO South-East Asia Region (7%) and the WHO Eastern Mediterranean Region (2%). The malaria mortality rate, which takes into account population growth, is estimated to have decreased by 60% globally between 2000 and 2015.</p>
+			<img src="img/malaria3.jpg">
+		</div>
+
+		<h3>Malaria Information Map</h3>
+		<!-- Select box to choose vis attribute-->
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="data-attr">Data Attribute</label>
+				<select class="form-control" id="data-attr" onchange="updateChoropleth()">
+					<option value="Malaria_cases">Diagnosed Cases</option>
+					<option value="Suspected_malaria_cases">Suspected Cases</option>
+					<option value="At_risk">At Risk</option>
+					<option value="At_high_risk">At High Risk</option>
+					<option value="UN_population">UN Population</option>
+				</select>
+			</div>
+		</form>
+
+		<!-- Choropleth map area -->
+		<div id="choropleth"></div>
+
+		<div class = "info">
+			<h3>Progress</h3>
+			<h4>Progress to elimination.</h4>
+			<p>An increasing number of countries are moving towards elimination of malaria. Whereas only 13 countries were estimated to have fewer than 1000 malaria cases in 2000, 33 countries are estimated to have achieved this milestone in 2015.</p>
+			<h4>Financing of malaria control programmes.</h4>
+			<p>Global financing for malaria control increased from an estimated US$ 960 million in 2005 to US$ 2.5 billion in 2014.</p>
+		</div>
+
+		<div class = "info">
+			<img src="img/malaria1.png">
+			<h3>Moving Forward</h3>
+			<p>To address remaining challenges in global malaria control and elimination, WHO has developed the Global Technical Strategy for Malaria 2016-2030. Adopted by the World Health Assembly in May 2015, the strategy provides a technical framework for all endemic countries as they work towards malaria control and elimination. This Global Technical Strategy sets ambitious but achievable goals for 2030, including: reducing malaria case incidence by at least 90%; reducing malaria mortality rates by at least 90%; eliminating malaria in at least 35 countries; preventing a resurgence of malaria in all countries that are malaria-free. To achieve these targets, annual funding for malaria will need to triple over the next 15-year period, from US$ 2.7 billion (current level of spending) to US$ 8.7 billion by 2030.</p>
+		</div>
+
+		<div class = "key-facts">
+			<div class="row">
+				<div class="center-block">
+					<h3>Key Fact By a Number</h3>
+					<span class="number">60%</span> <p>decrease in global malaria mortality rates between 2000 and 2015.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class = "info">
+			<h3>WHO Recommendations</h3>
+			<p>International travellers could be at risk of malaria infection in 97 countries around the world, mostly in Africa, Asia and the Americas.</p>
+			<p>Prevention of mosquito bites between dusk and dawn is the first line of defence against malaria. Measures to prevent mosquito bites include sleeping under long-lasting insecticidal nets, and using protective clothing and insect repellents. Depending on the malaria risk in the area to be visited, international travellers may also need to take preventive medication (chemoprophylaxis) prior to, during, and upon return from their travel.</p>
+		</div>
+
+		<div>Header image credit: theafricanmag.com</div>
+
+	</div>
+
+	<!-- Load JS libraries -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/queue.min.js"></script>
+	<script src="js/topojson.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/d3.tip.js"></script>
+
+	<!-- Choropleth and second visualization -->
+	<script src="js/vis-choropleth.js"></script>
+	<script src="js/vis-second.js"></script>
+	
+</body>
+</html>
