@@ -12,39 +12,40 @@
 		
 	</head>
 	<body>
+		<div class="container">
+			<h3>Maria Lai</h3>
+			<h3>D3.js Project</h3>
+	        <p>My work is in <em><a href="js/main.js">main.js</a></em>.</p>
+			<ul>
+				<li>Manipulate JSON data (filter, sort, data formats, sum numbers)</li>
+	            <li><strong>Filter</strong> data based on two <strong>user selections</strong> (Areas and Order Types)</li>
+	            <li><strong>Sort</strong> data after two user selections
+	            <li>Dynamically update DOM</li>
+			</ul>
 
-		<h3>Maria Lai</h3>
-		<h3>D3.js Project</h3>
-        <p>My work is in <em><a href="js/main.js">main.js</a></em>.</p>
-		<ul>
-			<li>Manipulate JSON data (filter, sort, data formats, sum numbers)</li>
-            <li><strong>Filter</strong> data based on two <strong>user selections</strong> (Areas and Order Types)</li>
-            <li><strong>Sort</strong> data after two user selections
-            <li>Dynamically update DOM</li>
-		</ul>
-
-		<img src="img/PizzaWorld-Logo.png">
-		
-		<h1>Dataset Summary</h1>
-		<div id="content"></div>
-		
-		<h1>Bar Chart: # of deliveries by date</h1>
-		<div class="select-div">
-			<select id="area" onchange="dataManipulation()">
-			  <option value="all">All Areas</option>
-			  <option value="Boston">Boston</option>
-			  <option value="Cambridge">Cambridge</option>
-			  <option value="Somerville">Somerville</option>
-			</select>
+			<img src="img/PizzaWorld-Logo.png">
+			
+			<h1>Dataset Summary</h1>
+			<div id="content"></div>
+			
+			<h1>Bar Chart: # of deliveries by date</h1>
+			<div class="select-div">
+				<select id="area" onchange="dataManipulation()">
+				  <option value="all">All Areas</option>
+				  <option value="Boston">Boston</option>
+				  <option value="Cambridge">Cambridge</option>
+				  <option value="Somerville">Somerville</option>
+				</select>
+			</div>
+			<div class="select-div">
+				<select id="order-type" onchange="dataManipulation()">
+				  <option value="all">All Order Types</option>
+				  <option value="web">Web</option>
+				  <option value="phone">Phone</option>
+				</select>
+			</div>
+			<center><div id="chart-area"></div></center>
 		</div>
-		<div class="select-div">
-			<select id="order-type" onchange="dataManipulation()">
-			  <option value="all">All Order Types</option>
-			  <option value="web">Web</option>
-			  <option value="phone">Phone</option>
-			</select>
-		</div>
-		<center><div id="chart-area"></div></center>
 
 		<!-- Load JS libraries: jQuery, bootstrap, D3, D3 Tooltips -->
 		<script src="js/jquery.min.js"></script>
