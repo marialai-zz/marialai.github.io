@@ -25,6 +25,15 @@ a.active {
     color: #18BC9C;
 }
 
+.success a,
+.success a:hover,
+.success a:focus,
+.success a:active,
+.success a.active {
+    outline: 0;
+    color: crimson;
+}
+
 h1,
 h2,
 h3,
